@@ -22,8 +22,14 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: baseline;
 }
 #navigation .wordmark a {
+  color: hsla(0, 0%, 0%, 0.9);
+  font-family: 'Fraunces';
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-variation-settings: 'opsz' 9, 'wght' 600, 'SOFT' 60, 'WONK' 1;
   text-decoration: none;
 }
 #navigation .menu {
