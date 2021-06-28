@@ -1,0 +1,61 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Navigation */
+header {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: white;
+}
+nav {
+  max-width: 992px;
+  margin: auto;
+  padding: 1rem;
+}
+#navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#navigation .wordmark a {
+  text-decoration: none;
+}
+#navigation .menu {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#navigation a {
+  text-decoration: none;
+}
+#menu-tgl, .menu-icn {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  #navigation {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  #navigation .menu {
+    display: none;
+    flex-direction: column;
+  }
+  .menu-icn {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+  }
+  #menu-tgl:checked ~ .menu {
+    display: flex;
+  }
+}
