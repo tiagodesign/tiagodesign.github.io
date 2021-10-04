@@ -44,24 +44,29 @@ body {
 /* Card Carousel */
 .card-carousel {
   height: calc(100vh - 10.5rem);
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-padding: 0.5rem;
+}
+.card-carousel > .bg-card.bg-card:not(:last-of-type) {
+  margin-right: 0.5rem;
+}
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) and (display:flow-root) {
+    .card-carousel::after {
+      content: '';
+      flex: 0 0 0.5rem;
+    }
+  }
 }
 @media screen and (min-width: 1024px) {
   .card-carousel {
     width: calc(((100vw - 1024px) / 2) + 1024px);
     margin-left: calc( (100vw - 1024px) / 2 );
   }
-}
-.card-carousel::before,
-.card-carousel::after {
-  content: '';
-  width: 0.5rem;
 }
 /* Card Carousel Scrollbar */
 .card-carousel::-webkit-scrollbar {
