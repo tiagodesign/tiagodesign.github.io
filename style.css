@@ -13,6 +13,7 @@
   /* Font Family */
   --primary-sans: 'Inter', sans-serif;
   /* Font Sizes */
+  --fs-body: 1rem;
   --fs-overline: 1.25rem;
   --fs-title: 1.5rem;
   /* Colors */
@@ -22,13 +23,17 @@
   --clr-neutral-100: hsla(240, 4%, 96%, 1);
   --clr-accent-400: hsla(36, 100%, 52%, 1);
 }
-body {
+.site {
+  height: 100vh;
   background-color: var(--clr-neutral-100);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 /* Reel Section */
 .reel {
   height: 100vh;
   padding: 3.5rem 0;
+  scroll-snap-align: start;
 }
 .reel > .title {
   max-width: 1024px;
@@ -51,7 +56,8 @@ body {
   scroll-snap-type: x mandatory;
   scroll-padding: 0.5rem;
 }
-.card-carousel > .bg-card.bg-card:not(:last-of-type) {
+.card-carousel > .bg-card.bg-card:not(:last-of-type),
+.card-carousel > .ps-card.ps-card:not(:last-of-type) {
   margin-right: 0.5rem;
 }
 @media not all and (min-resolution:.001dpcm) {
@@ -140,4 +146,52 @@ body {
   display: block;
   stroke: var(--clr-neutral-900);
   stroke-width: 1.5px;
+}
+/* Post Card */
+.ps-card {
+  min-width: calc(100vw - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-snap-align: start;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .ps-card {
+    min-width: calc((100vw - 4.5rem) / 2);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .ps-card {
+    min-width: calc((1024px - 4.5rem) / 2);
+  }
+}
+.ps-card > .title {
+  padding: 0.5rem;
+  font-family: var(--primary-sans);
+  font-size: var(--fs-title);
+  font-weight: 400;
+  line-height: 1.5em;
+  color: var(--clr-neutral-900);
+}
+.ps-card > .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.ps-card > .content > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.ps-card > .content > .caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-family: var(--primary-sans);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: 1.5em;
+  color: var(--clr-neutral-700);
 }
