@@ -1,246 +1,139 @@
-/* ==========================================================================
-   Type Scale
-   ========================================================================== */
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-@font-face {
-  font-family: 'Fraunces';
-  font-display: swap;
-  font-weight: 100 900;
-  src: url('fonts/Fraunces-latin_basic.woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+@import url('https://rsms.me/inter/inter.css');
+  html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
 }
-@font-face {
-  font-family: 'Fraunces';
-  font-display: swap;
-  font-weight: 100 900;
-  src: url('fonts/Fraunces-latin_ext.woff2');
-  unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Fraunces';
-  font-display: swap;
-  font-weight: 100 900;
-  font-style: italic;
-  src: url('fonts/Fraunces-Italic-latin_basic.woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-@font-face {
-  font-family: 'Fraunces';
-  font-display: swap;
-  font-weight: 100 900;
-  font-style: italic;
-  src: url('fonts/Fraunces-Italic-latin_ext.woff2');
-  unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-/* Desktop Font Scale */
-.expressiveSuperheadline {
-	font-family: 'Fraunces', Georgia, serif;
-	font-size: 8rem;
-	line-height: 1.1em;
-	font-variation-settings: 'opsz' 72, 'wght' 700, 'SOFT' 50, 'WONK' 1;
-}
-.displaySuperheadline {
-	font-family: 'Karla', 'Helvetica Neue', Arial, sans-serif;
-	font-weight: 600;
-	font-size: 7rem;
-	line-height: 1.1em;
-	letter-spacing: -0.05em;
-}
-.expressiveHeadline {
-	font-family: 'Fraunces', Georgia, serif;
-	font-size: 4rem;
-	line-height: 1.2em;
-	font-variation-settings: 'opsz' 72, 'wght' 600, 'SOFT' 50, 'WONK' 1;
-}
-.displayHeadline {
-	font-family: 'Karla', 'Helvetica Neue', Arial, sans-serif;
-	font-weight: 500;
-	font-size: 3.5rem;
-	line-height: 1.2em;
-	letter-spacing: -0.05em;
-}
-.expressiveSubheadline {
-	font-family: 'Fraunces', Georgia, serif;
-	font-size: 3rem;
-	line-height: 1.4em;
-	font-variation-settings: 'opsz' 9, 'wght' 400, 'SOFT' 100, 'WONK' 1;
-}
-.displaySubheadline {
-	font-family: 'Karla', 'Helvetica Neue', Arial, sans-serif;
-	font-weight: 300;
-	font-size: 2.625rem;
-	line-height: 1.4em;
-	letter-spacing: -0.02em;
-}
-.miniheadline {
-	font-family: 'Karla', 'Helvetica Neue', Arial, sans-serif;
-	font-weight: 600;
-	font-size: 2rem;
-	line-height: 1.5em;
-}
-.blockquote {
-	font-family: 'Karla', 'Helvetica Neue', Arial, sans-serif;
-	font-weight: 300;
-	font-size: 2rem;
-	line-height: 1.5em;
-}
-.body {
-	font-family: 'Karla', 'Helvetica Neue', Arial, sans-serif;
-	font-weight: 400;
-	font-size: 1.375rem;
-	line-height: 1.5em;
-}
-.overline {
-	font-family: 'Karla', 'Helvetica Neue', Arial, sans-serif;
-	font-weight: 700;
-	font-size: 1.125rem;
-	line-height: 1.5em;
-}
-.caption {
-	font-family: 'Karla', 'Helvetica Neue', Arial, sans-serif;
-	font-weight: 400;
-	font-size: 1rem;
-	line-height: 1.5em;
-	letter-spacing: 0.02em;
-}
-/* Tablet Font Scale */
-@media (max-width: 992px) {
-	.expressiveSuperheadline {
-		font-size: 4.5rem;
-	}
-	.displaySuperheadline {
-		font-size: 4rem;
-	}
-	.expressiveHeadline {
-		font-size: 3rem;
-	}
-	.displayHeadline {
-		font-size: 2.625rem;
-	}
-	.expressiveSubheadline {
-		font-size: 2rem;
-	}
-	.displaySubheadline {
-		font-size: 1.75rem;
-	}
-	.miniheadline, .blockquote {
-		font-size: 1.5rem;
-	}
-	.body {
-		font-size: 1.25rem;
-	}
-	.overline {
-		font-size: 1rem;
-		letter-spacing: 0.02em;
-	}
-	.caption {
-		font-size: 0.875rem;
-	}
-}
-/* Mobile Font Scale */
-@media (max-width: 576px) {
-	.expressiveSuperheadline {
-		font-size: 4rem;
-	}
-	.displaySuperheadline {
-		font-size: 3.5rem;
-	}
-	.miniheadline, .blockquote {
-		font-size: 1.25rem;
-	}
-	.body {
-		font-size: 1.125rem;
-	}
-	.overline {
-		font-size: 0.875rem;
-	}
-	.caption {
-		font-size: 0.75rem;
-		letter-spacing: 0.05em;
-	}
-}
-/* ==========================================================================
-   General Settings
-   ========================================================================== */
-html {
-  scroll-behavior: smooth;
-}
-* {
+*, *::after, *::before {
   margin: 0;
   padding: 0;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
+  box-sizing: border-box;
 }
-
-/* Navigation */
-header {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background-color: hsla(0, 0%, 98%, 1);
+/* Variables */
+:root {
+  /* Font Family */
+  --primary-sans: 'Inter', sans-serif;
+  /* Font Sizes */
+  --fs-overline: 1.25rem;
+  --fs-title: 1.5rem;
+  /* Colors */
+  --clr-neutral-900: hsla(240, 16%, 20%, 1);
+  --clr-neutral-700: hsla(240, 8%, 64%, 1);
+  --clr-neutral-300: hsla(240, 4%, 90%, 1);
+  --clr-neutral-100: hsla(240, 4%, 96%, 1);
+  --clr-accent-400: hsla(36, 100%, 52%, 1);
 }
-nav {
-  max-width: 992px;
+body {
+  background-color: var(--clr-neutral-100);
+}
+/* Reel Section */
+.reel {
+  width: 100vw;
+  height: 100vh;
+  padding: 3.5rem 0;
+}
+.reel > .title {
+  max-width: 1024px;
   margin: auto;
-  padding: 1.5rem;
+  padding: 1rem 0.5rem;
+  display: block;
+  font-family: var(--primary-sans);
+  font-size: var(--fs-overline);
+  font-weight: 600;
+  line-height: 1.2em;
+  color: var(--clr-neutral-900);
 }
-#navigation {
+/* Card Carousel */
+.card-carousel {
+  height: calc(100vh - 10.5rem);
+  padding: 0.5rem 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
+  gap: 0.5rem;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0.5rem;
 }
-#navigation .wordmark a {
-  color: hsla(0, 0%, 32%, 1);
-  font-family: 'Fraunces', serif;
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-variation-settings: 'opsz' 9, 'wght' 600, 'SOFT' 100, 'WONK' 1;
-  text-decoration: none;
+@media (min-width: 1024px) {
+  .card-carousel {
+    width: calc(((100vw - 1024px) / 2) + 1024px);
+    margin-left: calc( (100vw - 1024px) / 2 );
+  }
 }
-#navigation .menu {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.card-carousel::before,
+.card-carousel::after {
+  content: '';
+  width: 0.5rem;
+}
+/* Card Carousel Scrollbar */
+.card-carousel::-webkit-scrollbar {
+  height: 0.25rem;
+}
+.card-carousel::-webkit-scrollbar-track {
+  background-color: var(--clr-neutral-300);
+}
+.card-carousel::-webkit-scrollbar-thumb {
+  background-color: var(--clr-neutral-700);
+}
+.card-carousel::-webkit-scrollbar-thumb:hover {
+  background-color: var(--clr-neutral-900);
+}
+/* Background Card */
+.bg-card {
+  min-width: calc(100vw - 4rem);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  gap: 2rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  scroll-snap-align: start;
 }
-.menu a {
-  color: hsla(0, 0%, 64%, 1);
-  font-family: 'Karla', sans-serif;
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 2rem;
-  text-decoration: none;
+@media (min-width: 768px) {
+  .bg-card {
+    min-width: calc((100vw - 4.5rem) / 2);
+  }
 }
-.menu a:hover {
-  color: hsla(0, 0%, 32%, 1);
+@media (min-width: 1024px) {
+  .bg-card {
+    min-width: calc((1024px - 4.5rem) / 2);
+  }
 }
-#menu-tgl, .menu-icn {
-  display: none;
-  line-height: 2rem;
+.bg-card > .content {
+  padding: 1rem;
+  background-image: linear-gradient(to top, hsla(0, 0%, 0%, 0.4), hsla(0, 0%, 0%, 0.2), hsla(0, 0%, 0%, 0));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
 }
-@media screen and (max-width: 576px) {
-  #navigation {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  #navigation .menu {
-    display: none;
-    flex-direction: column;
-  }
-  .menu-icn {
-    display: block;
-    position: absolute;
-    right: 1.5rem;
-    cursor: pointer;
-  }
-  #menu-tgl:checked ~ .menu {
-    display: flex;
-  }
+.bg-card > .content > .overline {
+  font-family: var(--primary-sans);
+  font-size: var(--fs-overline);
+  font-weight: 300;
+  line-height: 1.2em;
+  color: var(--clr-neutral-100);
+}
+.bg-card > .content > .title {
+  font-family: var(--primary-sans);
+  font-size: var(--fs-title);
+  font-weight: 600;
+  line-height: 1.5em;
+  color: var(--clr-neutral-100);
+}
+.bg-card > .content > .button {
+  padding: 0.5rem;
+  border-radius: 100vw;
+  background-color: var(--clr-neutral-100);
+  display: block;
+  align-self: flex-end;
+  transition: 200ms ease-in-out;
+}
+.bg-card > .content > .button:hover,
+.bg-card > .content > .button:focus {
+  background-color: var(--clr-neutral-700);
+}
+.bg-card > .content > .button svg {
+  display: block;
+  stroke: var(--clr-neutral-900);
+  stroke-width: 1.5px;
 }
